@@ -58,15 +58,17 @@ const ItemSeparator = () => <View style={styles.separator} />;
 
 const RepositoryList = () => {
   const renderItem = ({ item }) => (
-    <RepositoryItem fullName={item.fullName} description={item.description} 
+    <RepositoryItem fullName={item.fullName} 
+    description={item.description} 
     language={item.language}
     forksCount={item.forksCount}
     stargazersCount={item.stargazersCount}
     ratingAverage={item.ratingAverage}
     reviewCount={item.reviewCount}
+    ownerAvatarUrl={item.ownerAvatarUrl}
     />
   );
-
+  
   return (
     <FlatList
       data={repositories}
