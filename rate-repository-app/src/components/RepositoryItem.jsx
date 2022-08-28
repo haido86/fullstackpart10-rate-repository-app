@@ -7,7 +7,7 @@ import Text from "./Text";
 const styles = StyleSheet.create({
     container: {
         backgroundColor: theme.colors.thirdly, 
-        padding: 5   
+        padding: 5,
         },
     block:{       
         display: "flex",        
