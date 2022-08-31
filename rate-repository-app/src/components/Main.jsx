@@ -9,14 +9,14 @@ const styles = StyleSheet.create({
   container: {
     flexGrow: 1,
     flexShrink: 1,
-    backgroundColor:theme.colors.mainBackground,
+    backgroundColor: theme.colors.mainBackground,
   },
 });
 
 const Main = () => {
   return (
     <View style={styles.container}>
-      <AppBar/>
+      <AppBar />
       <Routes>
         <Route path="/" element={<RepositoryList />} exact />
         <Route path="/signIn" element={<SignIn />} exact />
