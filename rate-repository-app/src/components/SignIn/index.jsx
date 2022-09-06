@@ -5,6 +5,7 @@ import theme from '../../theme';
 import FormikTextInput from './FormikTextInput';
 import Text from '../Text';
 import useSignIn from '../../hooks/useSignIn';
+import { useNavigate } from 'react-router-native';
 
 const styles = StyleSheet.create({
   boxContainer: {
@@ -53,12 +54,13 @@ const validationSchema = yup.object().shape({
 
 const SignIn = () => {
   const [signIn] = useSignIn();
+  let navigate = useNavigate();
 
   const onSubmit = async (values) => {
     const { username, password } = values;
     try {
-      const { data } = await signIn({ username, password });
-      console.log('data', data);
+      await signIn({ username, password });
+      navigate('../RepositoryList', { replace: true });
     } catch (e) {
       console.log(e);
     }
