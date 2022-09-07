@@ -6,6 +6,8 @@ import FormikTextInput from './FormikTextInput';
 import Text from '../Text';
 import useSignIn from '../../hooks/useSignIn';
 import { useNavigate } from 'react-router-native';
+import { useQuery } from '@apollo/client';
+import { USER } from '../../graphql/queries';
 
 const styles = StyleSheet.create({
   boxContainer: {

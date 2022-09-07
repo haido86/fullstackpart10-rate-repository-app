@@ -13,7 +13,6 @@ const useSignIn = () => {
     const result = await authenticate({ variables: { credentials } });
 
     await authStorage.setAccessToken(result.data.authenticate.accessToken);
-
     apolloClient.resetStore();
 
     return result;
